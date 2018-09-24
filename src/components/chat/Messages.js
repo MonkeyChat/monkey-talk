@@ -11,6 +11,7 @@ class Messages extends React.Component {
             height : 0,
             messages : props.messages,
             gif : false,
+            emoji : false
         }
     }
 
@@ -41,7 +42,15 @@ class Messages extends React.Component {
         this.setState({
             gif : !this.state.gif
         }, () => {
-            this.assignHeight();
+              this.assignHeight();
+        });
+    }
+
+    toggleEmoji(e){
+        this.setState({
+            emoji : !this.state.Emoji
+        }, () => {
+            console.log("HIT ME")
         });
     }
 

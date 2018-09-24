@@ -1,4 +1,6 @@
 import React from 'react';
+import 'emoji-mart/css/emoji-mart.css'
+import { Picker } from 'emoji-mart'
 
 class ChatBox extends React.Component{
     constructor(props){
@@ -39,6 +41,13 @@ class ChatBox extends React.Component{
                         onClick={this.props.toggleGif}
                     >
                         <i className="fa fa-image"/> GIF
+                    </button>
+                    <button
+                        className="btn btn-outline-secondary"
+                        type="button"
+                        onClick={this.props.toggleEmoji}
+                    >
+                        <i className="fa fa-smile-o"/> Emoji
                     </button>
                 </div>
                 <input

@@ -1,4 +1,6 @@
 import React from 'react';
+import 'emoji-mart/css/emoji-mart.css'
+import { Picker } from 'emoji-mart'
 
 const Message = (props) => {
     return (
@@ -10,6 +12,8 @@ const Message = (props) => {
             <div className="data">
                 {props.message.message.type === 'message' ? (
                     <div className="text">
+                    <Picker onSelect={this.addEmoji} />
+
                         {props.message.message.text}
                     </div>
                 ) : (
